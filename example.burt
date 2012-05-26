@@ -1,0 +1,25 @@
+@vars {
+	white: '#fff',
+	black: '#000',
+	blue: '#fff',
+	green: '#000'
+}
+
+@mixin mix {
+	display: inline-block;
+}
+
+@mixin mixer {
+	color:green;
+	height:400px;
+}
+
+#wrapper {
+	color: {{blue}};
+	{{mix}}
+}
+
+#container {
+	{{mixer}}
+	{{mix}}
+}
