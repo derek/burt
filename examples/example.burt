@@ -17,6 +17,7 @@
 }
 
 #foo {
+	width: 200px;
 	color: {{blue}};
 	{{mixA}}
 }

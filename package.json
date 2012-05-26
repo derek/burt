@@ -1,0 +1,25 @@
+{
+    "name": "burt",
+    "version": "0.0.1",
+    "preferGlobal": "true",
+    "author": "Derek Gathright <mail@derek.io>",
+    "description": "A simple CSS preprocessor that does a few nifty things. But not too many.",
+    "engine": {
+        "node": ">=v0.7.2"
+    },
+    "main": "./lib/burt.js",
+    "bin": {
+        "burt": "./bin/cli.js"
+    },
+    "url": "https://github.com/derek/burt",
+    "keywords": ["burt", "css"],
+    "repository": {
+        "type": "git",
+        "url": "http://github.com/derek/burt.git"
+    },
+    "dependencies": {
+        "cli": "0.4.0",
+        "handlebars": "1.0.5beta"
+    },
+    "license": "BSD"
+}
