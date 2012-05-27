@@ -1,19 +1,19 @@
 @vars {
-	white: '#ffffff',
-	black: '#000000'
+	white: #ffffff
+	black: #000000
 }
 
 @vars {
-	blue: '#0000FF',
-	green: '#008000'
-}
-
-@mixin mixB {
-	display: inline-block;
+	blue: #0000FF
+	green: #008000
 }
 
 @mixin mixA {
 	height: 400px;
+}
+
+@mixin mixB {
+	display: inline-block;
 }
 
 #foo {
