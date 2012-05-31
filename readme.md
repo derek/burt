@@ -5,13 +5,13 @@ Burt is a simple CSS pre-processor that does a few nifty things.
 
 **Another CSS pre-processor?**
 
-CSS preprocessors are all the rage, but it seems to me like they are doing too much. I don't want a new scripting language that generates CSS, I want to code CSS.  CSS as a markup language is (mostly) fine as-is, but it's just missing a few features and Burt helps it get there without going overboard.  
+CSS preprocessors are all the rage, but it seems to me like they are doing too much. I don't want a new scripting language that generates CSS, I want to code CSS.  CSS as a markup language is (mostly) fine as-is, but it's just missing a few features and Burt helps it get there without going overboard.
 
 While other pre-processors pride themselves on adding dozens and dozens of new features, Burt prides itself on adding fewer features.  At the moment, the feature count is two.  Yes, that's it.  Variables & Mixins.  Maybe more in the future.
 
 **How do I use it?**
 
-Install this node.js-based CLI tool which will convert a `.burt` file to CSS.
+Install this node.js-based CLI tool which will convert a `.burt` file(s) to CSS.
 
 **What's a .burt file?**
 
@@ -19,7 +19,7 @@ It's a CSS file, but with a few additional sprinkles of happy in it.  Your file 
 
 **Can I include a `.burt` directly in my HTML page?**
 
-That's a bad idea.  Burt is inteded to be part of a build process.
+That's a bad idea.  Burt is intended to be part of a build process.
 
 Install
 -------
@@ -29,7 +29,7 @@ Install
 Usage
 -----
 
-    burt -f source.burt
+    burt -f source.burt > output.css
 
 Variables
 ---------
