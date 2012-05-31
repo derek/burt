@@ -1,19 +1,19 @@
 Burt
 ========================
 
-Burt is a simple CSS pre-processor that does a few nifty things.  Unlike other pre-processors that pride themselves by reinventing CSS, Burt thinks CSS is mostly fine as-is and just needs a few additional features.
+Burt is a proof-of-concept for a "less is more" simple CSS pre-processor.  Unlike other pre-processors that pride themselves by reinventing CSS, Burt thinks CSS is mostly fine as-is and just needs a few additional features.
 
 **How do I use it?**
 
-Install this node.js-based CLI tool which will convert a `.burt` file(s) to CSS.
+Once installed, you can either use the CLI tool which will convert a `.burt` file to CSS, or a node.js API for programatic access.
 
 **What's a .burt file?**
 
 It's a CSS file, but with a few additional sprinkles of happy in it.  Your file will be a mixture of CSS and some custom Burt syntax.  The Burt syntax will be parsed out to generate template data, and the leftover CSS portion will then become the Mustache template.  Feed the template into Handlebars, compile with the data, and viola! CSS
 
-**Can I include a `.burt` directly in my HTML page?**
+**Can I include a `.burt` file directly in my HTML page?**
 
-That seems like a bad idea.  Burt is intended to be part of a build process.
+That seems like a bad idea.
 
 Install
 -------
@@ -23,11 +23,31 @@ Install
 Usage
 -----
 
+Burt can be used two ways: CLI or API
+
+**Command Line**
+
     burt -f source.burt > output.css
+
+**API**
+	
+	// Import the module
+	Burt = require('burt'),
+    
+	// The simple way
+    css = Burt.getCSS('path/to/source.burt');
+
+    // Or, use Reynolds for more features 
+    reynolds = new Burt.Reynolds();
+    reynolds.addSource('path/to/source.burt');
+    css = reynolds.getCSS();
+
+Features
+========
 
 Variables
 ---------
-**input: myFile.burt**
+**myFile.burt**
 
     @vars {
         white: '#ffffff'
@@ -48,7 +68,7 @@ Variables
 Mixins
 ------
 
-**input: myFile.burt**
+**myFile.burt**
 
 	@mixin mixA {
 		height: 400px;
@@ -79,6 +99,7 @@ Mixins
 
 	#bar {
 		height: 400px;
+		border: solid 2px;
 		display: inline-block;
 	}
 
