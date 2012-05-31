@@ -87,4 +87,4 @@ Why "Burt"
 
 We're combining mustache templates and stylesheets, and when it comes to styled mustaches, it doesn't get any better than...
 
-![Burt Reynolds](http://www.nndb.com/people/888/000023819/burt-reynolds-sm.jpg)
+![Burt Reynolds](http://i.imgur.com/PevJB.jpg)
