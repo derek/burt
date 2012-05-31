@@ -1,13 +1,7 @@
 Burt
 ========================
 
-Burt is a simple CSS pre-processor that does a few nifty things.
-
-**Another CSS pre-processor?**
-
-CSS preprocessors are all the rage, but it seems to me like they are doing too much. I don't want a new scripting language that generates CSS, I want to code CSS.  CSS as a markup language is (mostly) fine as-is, but it's just missing a few features and Burt helps it get there without going overboard.
-
-While other pre-processors pride themselves on adding dozens and dozens of new features, Burt prides itself on adding fewer features.  At the moment, the feature count is two.  Yes, that's it.  Variables & Mixins.  Maybe more in the future.
+Burt is a simple CSS pre-processor that does a few nifty things.  Unlike other pre-processors that pride themselves by reinventing CSS, Burt thinks CSS is mostly fine as-is and just needs a few additional features.
 
 **How do I use it?**
 
@@ -19,7 +13,7 @@ It's a CSS file, but with a few additional sprinkles of happy in it.  Your file 
 
 **Can I include a `.burt` directly in my HTML page?**
 
-That's a bad idea.  Burt is intended to be part of a build process.
+That seems like a bad idea.  Burt is intended to be part of a build process.
 
 Install
 -------
@@ -56,12 +50,13 @@ Mixins
 
 **input: myFile.burt**
 
-	@mixin mixB {
-		display: inline-block;
-	}
-
 	@mixin mixA {
 		height: 400px;
+		border: solid 2px;
+	}
+
+	@mixin mixB {
+		display: inline-block;
 	}
 
 	#foo {
@@ -79,6 +74,7 @@ Mixins
 	#foo {
 		width: 200px;
 		height: 400px;
+		border: solid 2px;
 	}
 
 	#bar {
